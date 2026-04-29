@@ -34,16 +34,16 @@ input, select, textarea, button { font-family: inherit; font-size: inherit; }
 
   --background:              #000000;
   --on-background:           #f4f4f5;
-  --surface:                 #0a0a0a;
+  --surface:                 #000000;
   --on-surface:              #f4f4f5;
   --on-surface-variant:      #a1a1aa;
-  --surface-variant:         #1c1c1e;
-  --surface-dim:             #050505;
-  --surface-container-lowest:#060606;
-  --surface-container-low:   #0a0a0a;
-  --surface-container:       #111113;
-  --surface-container-high:  #1c1c1e;
-  --surface-container-highest:#27272a;
+  --surface-variant:         #000000;
+  --surface-dim:             #000000;
+  --surface-container-lowest:#000000;
+  --surface-container-low:   #000000;
+  --surface-container:       #000000;
+  --surface-container-high:  #000000;
+  --surface-container-highest:#0a0a0a;
 
   --outline:          #3f3f46;
   --outline-variant:  #27272a;
