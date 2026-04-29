@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MediHub - Pesan Jadwal</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== Desktop Navbar ===== -->
+<nav class="top-nav">
+    <a class="top-nav__brand" href="index.html"><span class="material-symbols-outlined" style="font-size:20px;font-variation-settings:'FILL' 1;">local_hospital</span>MediHub</a>
+    <div class="top-nav__links">
+        <a class="top-nav__link" href="index.html">Beranda</a>
+        <a class="top-nav__link" href="records.html">Rekam Medis</a>
+        <a class="top-nav__link top-nav__link--active" href="booking.html">Pesan Jadwal</a>
+    </div>
+</nav>
+
+<!-- ===== Main Content ===== -->
+<main class="container-wide">
+    <div style="margin-bottom:32px;">
+        <h1 class="t-h1" style="color:var(--primary);">Jadwalkan Konsultasi</h1>
+        <p class="t-body-md color-on-sv" style="margin-top:8px;">Lengkapi formulir di bawah ini untuk mendaftarkan jadwal pertemuan Anda.</p>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="bento booking-grid">
+
+        <!-- Left: Info Card -->
+        <div class="card bento--col-5 info-card">
+            <div class="info-card__img-wrap">
+                <img class="info-card__img" alt="Modern Clinic Waiting Area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvTq_zF9py3poTy2jaYSS6dqzG4fG0xJmKykon99LQdMK5l7qctVaxc_UtynIj50SSRtNBcNpO-LmR0r087yCT5SXsRFWaIBgK0wt4IzNPurxJc-EhmTmtL2MmN7hTBM7MdmNoGxDr8cf7PA7bNkJXTg5s6YHPvvEVn5ElFVI00PKjs7acmszYldaHfLmQAyOEbK-LQpE2bCUSGemOsitcydpLBflDIFgiKQFSxp3e6vMjJDPv8kFN4w2ewWkwyvY9t-6owJ1dROg"/>
+                <div class="info-card__overlay"></div>
+                <div class="info-card__overlay-text">
+                    <span class="material-symbols-outlined">medical_services</span>
+                    <h3 class="t-h3">Keunggulan Klinis</h3>
+                </div>
+            </div>
+            <div class="info-card__body">
+                <p>Spesialis kami meninjau detail awal Anda sebelum kunjungan untuk memastikan konsultasi yang terfokus dan efisien.</p>
+                <div style="margin-top:32px;">
+                    <div class="info-detail">
+                        <span class="material-symbols-outlined">schedule</span>
+                        <div>
+                            <div class="info-detail__title">Jam Operasional</div>
+                            <div class="info-detail__text">Senin - Jumat: 08:00 - 18:00</div>
+                        </div>
+                    </div>
+                    <div class="info-detail">
+                        <span class="material-symbols-outlined">location_on</span>
+                        <div>
+                            <div class="info-detail__title">Lokasi</div>
+                            <div class="info-detail__text">Unismuh Makassar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Form Card -->
+        <div class="card bento--col-7 form-card">
+            <form id="bookingForm" action="#" method="get">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Nama Lengkap</label>
+                        <input class="form-control" id="fullName" name="fullName" placeholder="Jane Doe" type="text" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="mrn">NIM</label>
+                        <input class="form-control" id="mrn" name="mrn" placeholder="NIM-XXXXX" type="text" required/>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top:16px;">
+                    <label for="specialist">Departemen / Spesialis</label>
+                    <div class="select-wrap">
+                        <select class="form-control" id="specialist" name="specialist" required>
+                            <option disabled="" selected="" value="">Pilih departemen</option>
+                            <option value="cardiology">Kardiologi</option>
+                            <option value="neurology">Neurologi</option>
+                            <option value="orthopedics">Ortopedi</option>
+                            <option value="general">Praktik Umum</option>
+                        </select>
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top:16px;">
+                    <label for="appointmentDate">Tanggal Pilihan</label>
+                    <input class="form-control" id="appointmentDate" name="appointmentDate" type="date" required/>
+                </div>
+
+                <div class="form-group" style="margin-top:16px;">
+                    <label for="complaint">Keluhan Singkat / Alasan Kunjungan</label>
+                    <textarea class="form-control" id="complaint" name="complaint" placeholder="Jelaskan secara singkat gejala atau alasan pertemuan Anda..." rows="4" required></textarea>
+                </div>
+
+                <div class="form-submit">
+                    <button class="btn--submit" type="submit">
+                        <span>Pesan Jadwal</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+<!-- ===== Mobile Bottom Nav ===== -->
+<nav class="bottom-nav">
+    <a class="bottom-nav__link" href="index.html">
+        <span class="material-symbols-outlined">home</span>
+        <span class="bottom-nav__label">Beranda</span>
+    </a>
+    <a class="bottom-nav__link" href="records.html">
+        <span class="material-symbols-outlined">folder_shared</span>
+        <span class="bottom-nav__label">Rekam Medis</span>
+    </a>
+    <a class="bottom-nav__link bottom-nav__link--active" href="booking.html">
+        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">event</span>
+        <span class="bottom-nav__label">Pesan Jadwal</span>
+    </a>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MediHub - Rekam Medis (Hal 3)</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="top-nav">
+    <a class="top-nav__brand" href="index.html"><span class="material-symbols-outlined" style="font-size:20px;font-variation-settings:'FILL' 1;">local_hospital</span>MediHub</a>
+    <div class="top-nav__links">
+        <a class="top-nav__link" href="index.html">Beranda</a>
+        <a class="top-nav__link top-nav__link--active" href="records.html">Rekam Medis</a>
+        <a class="top-nav__link" href="booking.html">Pesan Jadwal</a>
+    </div>
+</nav>
+<main class="container-wide">
+    <div class="records-header">
+        <div>
+            <h1 class="t-h1 color-on-surface">Rekam Medis</h1>
+            <p class="t-body-md color-on-sv">Halaman 3 - Data rekam medis.</p>
+        </div>
+    </div>
+    <div class="table-wrap">
+        <div class="table-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NIM</th><th>Tanggal</th><th>Nama Dokter</th><th>Spesialisasi</th><th>Status</th><th class="text-right">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-500">EX-2023-091</td>
+                        <td class="color-on-sv">01 Agu 2023</td>
+                        <td><div class="inline-flex"><div class="avatar-circle avatar-circle--blue">AF</div><span class="fw-500 color-on-surface">Dr. Afirsya</span></div></td>
+                        <td class="color-on-sv">Kardiologi</td>
+                        <td><span class="badge badge--done"><span class="dot"></span>Selesai</span></td>
+                        <td class="text-right"><button class="row-action"><span class="material-symbols-outlined" style="font-size:20px;">more_vert</span></button></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-500">EX-2023-092</td>
+                        <td class="color-on-sv">22 Jul 2023</td>
+                        <td><div class="inline-flex"><div class="avatar-circle avatar-circle--warm">AL</div><span class="fw-500 color-on-surface">Dr. Alif</span></div></td>
+                        <td class="color-on-sv">Pediatri</td>
+                        <td><span class="badge badge--done"><span class="dot"></span>Selesai</span></td>
+                        <td class="text-right"><button class="row-action"><span class="material-symbols-outlined" style="font-size:20px;">more_vert</span></button></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-500">EX-2023-093</td>
+                        <td class="color-on-sv">10 Jul 2023</td>
+                        <td><div class="inline-flex"><div class="avatar-circle avatar-circle--blue">DZ</div><span class="fw-500 color-on-surface">Dr. Dzul</span></div></td>
+                        <td class="color-on-sv">Praktik Umum</td>
+                        <td><span class="badge badge--pending"><span class="dot"></span>Menunggu</span></td>
+                        <td class="text-right"><button class="row-action"><span class="material-symbols-outlined" style="font-size:20px;">more_vert</span></button></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-500">EX-2023-094</td>
+                        <td class="color-on-sv">28 Jun 2023</td>
+                        <td><div class="inline-flex"><div class="avatar-circle avatar-circle--warm">AD</div><span class="fw-500 color-on-surface">Dr. Adina</span></div></td>
+                        <td class="color-on-sv">Ortopedi</td>
+                        <td><span class="badge badge--done"><span class="dot"></span>Selesai</span></td>
+                        <td class="text-right"><button class="row-action"><span class="material-symbols-outlined" style="font-size:20px;">more_vert</span></button></td>
+                    </tr>
+                    <tr>
+                        <td class="fw-500">EX-2023-095</td>
+                        <td class="color-on-sv">15 Jun 2023</td>
+                        <td><div class="inline-flex"><div class="avatar-circle avatar-circle--blue">AB</div><span class="fw-500 color-on-surface">Dr. Abidah</span></div></td>
+                        <td class="color-on-sv">Dermatologi</td>
+                        <td><span class="badge badge--done"><span class="dot"></span>Selesai</span></td>
+                        <td class="text-right"><button class="row-action"><span class="material-symbols-outlined" style="font-size:20px;">more_vert</span></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-footer">
+            <span class="table-footer__info">Menampilkan 11 sampai 15 dari 15 entri</span>
+            <div class="page-btns">
+                <a href="records-2.html" class="page-btn"><span class="material-symbols-outlined">chevron_left</span></a>
+                <a href="records.html" class="page-btn">1</a>
+                <a href="records-2.html" class="page-btn">2</a>
+                <span class="page-btn page-btn--active">3</span>
+                <button class="page-btn" disabled><span class="material-symbols-outlined">chevron_right</span></button>
+            </div>
+        </div>
+    </div>
+</main>
+<nav class="bottom-nav">
+    <a class="bottom-nav__link" href="index.html"><span class="material-symbols-outlined">home</span><span class="bottom-nav__label">Beranda</span></a>
+    <a class="bottom-nav__link bottom-nav__link--active" href="records.html"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">folder_shared</span><span class="bottom-nav__label">Rekam Medis</span></a>
+    <a class="bottom-nav__link" href="booking.html"><span class="material-symbols-outlined">event</span><span class="bottom-nav__label">Pesan Jadwal</span></a>
+</nav>
+</body>
+</html>
