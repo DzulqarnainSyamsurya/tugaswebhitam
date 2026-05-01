@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MediHub - Dashboard Afirsya</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== Desktop Navbar ===== -->
+<nav class="top-nav">
+    <a class="top-nav__brand" href="index.html"><span class="material-symbols-outlined" style="font-size:20px;font-variation-settings:'FILL' 1;">favorite</span>MediHub</a>
+    <div class="top-nav__links">
+        <a class="top-nav__link top-nav__link--active" href="index.html">Beranda</a>
+        <a class="top-nav__link" href="records.html">Rekam Medis</a>
+        <a class="top-nav__link" href="booking.html">Pesan Jadwal</a>
+    </div>
+</nav>
+
+<!-- ===== Main Content ===== -->
+<main class="container">
+
+    <!-- Hero Section -->
+    <header class="hero-header">
+        <div>
+            <h1 class="t-h1">Selamat Pagi, Afirsya</h1>
+            <p class="t-body-lg color-secondary">Berikut adalah ringkasan kesehatan harian Anda.</p>
+        </div>
+        <div class="status-badge">
+            <div class="dot dot--green"></div>
+            <span class="t-label-sm color-on-surface" style="text-transform:uppercase; letter-spacing:0.05em;">Klinik: Beroperasi Normal</span>
+        </div>
+    </header>
+
+    <!-- Bento Grid -->
+    <div class="bento">
+
+        <!-- Health Stats (8 cols) -->
+        <div class="card bento--col-8">
+            <div class="card__header">
+                <h2 class="t-h3 color-on-surface">Vital Terbaru</h2>
+                <a href="records.html" class="btn-link">
+                    Lihat Riwayat <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+            <div class="vitals-grid">
+                <div class="vital-tile">
+                    <div class="vital-tile__label">
+                        <span class="material-symbols-outlined">favorite</span>
+                        <span class="t-label-sm">Detak Jantung</span>
+                    </div>
+                    <div class="vital-tile__value">
+                        <span class="vital-tile__num">68</span>
+                        <span class="vital-tile__unit">bpm</span>
+                    </div>
+                </div>
+                <div class="vital-tile">
+                    <div class="vital-tile__label">
+                        <span class="material-symbols-outlined">blood_pressure</span>
+                        <span class="t-label-sm">Tekanan Darah</span>
+                    </div>
+                    <div class="vital-tile__value">
+                        <span class="vital-tile__num">112/70</span>
+                    </div>
+                </div>
+                <div class="vital-tile">
+                    <div class="vital-tile__label">
+                        <span class="material-symbols-outlined">scale</span>
+                        <span class="t-label-sm">Berat Badan</span>
+                    </div>
+                    <div class="vital-tile__value">
+                        <span class="vital-tile__num">57</span>
+                        <span class="vital-tile__unit">kg</span>
+                    </div>
+                </div>
+                <div class="vital-tile">
+                    <div class="vital-tile__label">
+                        <span class="material-symbols-outlined">thermostat</span>
+                        <span class="t-label-sm">Suhu</span>
+                    </div>
+                    <div class="vital-tile__value">
+                        <span class="vital-tile__num">36.4</span>
+                        <span class="vital-tile__unit">°C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Operational Hours (4 cols) -->
+        <div class="card bento--col-4">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:24px;">
+                <span class="material-symbols-outlined color-primary">schedule</span>
+                <h2 class="t-h3 color-on-surface" style="margin:0;">Jam Operasional Klinik</h2>
+            </div>
+            <ul class="hours-list">
+                <li>
+                    <span class="hours-list__day">Senin - Jumat</span>
+                    <span class="hours-list__time">08:00 - 20:00</span>
+                </li>
+                <li>
+                    <span class="hours-list__day">Sabtu</span>
+                    <span class="hours-list__time">09:00 - 14:00</span>
+                </li>
+                <li>
+                    <span class="hours-list__day">Minggu</span>
+                    <span class="hours-list__closed">Tutup</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- On-Duty Doctors (12 cols) -->
+        <div class="card bento--col-12">
+            <div class="card__header">
+                <h2 class="t-h3 color-on-surface">Spesialis yang Tersedia Hari Ini</h2>
+                <a href="booking.html" class="btn btn--primary">Pesan Jadwal</a>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-card__avatar">
+                        <img alt="Dr. Afirsya" src="afirsya.png"/>
+                    </div>
+                    <div class="flex-col">
+                        <span class="doctor-card__name">Afirsya Fernanda Fildy</span>
+                        <span class="doctor-card__spec">Kardiologi</span>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__avatar">
+                        <img alt="Dr. Alif" src="alif.jpeg"/>
+                    </div>
+                    <div class="flex-col">
+                        <span class="doctor-card__name">Alif Suma Mahendra</span>
+                        <span class="doctor-card__spec">Pediatri</span>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__avatar">
+                        <img alt="Dr. Dzul" src="dzul.png"/>
+                    </div>
+                    <div class="flex-col">
+                        <span class="doctor-card__name">Dzulqarnain Syamsurya</span>
+                        <span class="doctor-card__spec">Praktik Umum</span>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__avatar">
+                        <img alt="Dr. Adina" src="adina.jpeg"/>
+                    </div>
+                    <div class="flex-col">
+                        <span class="doctor-card__name">Adina Safana Rizqin</span>
+                        <span class="doctor-card__spec">Ortopedi</span>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-card__avatar">
+                        <img alt="Dr. Abidah" src="abidah.jpeg"/>
+                    </div>
+                    <div class="flex-col">
+                        <span class="doctor-card__name">Nur Abidah</span>
+                        <span class="doctor-card__spec">Dermatologi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- ===== Mobile Bottom Nav ===== -->
+<nav class="bottom-nav">
+    <a class="bottom-nav__link bottom-nav__link--active" href="index.html">
+        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">home</span>
+        <span class="bottom-nav__label">Beranda</span>
+    </a>
+    <a class="bottom-nav__link" href="records.html">
+        <span class="material-symbols-outlined">folder_shared</span>
+        <span class="bottom-nav__label">Rekam Medis</span>
+    </a>
+    <a class="bottom-nav__link" href="booking.html">
+        <span class="material-symbols-outlined">event</span>
+        <span class="bottom-nav__label">Pesan Jadwal</span>
+    </a>
+</nav>
+</body>
+</html>
